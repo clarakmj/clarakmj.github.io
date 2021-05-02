@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>insightUBC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper">
+                    <a href="../index.html">Home</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="../about.html">About</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="../contact.html">Contact</a>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="brand">
+                    <div>CLARA KIM</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="back-wrapper">
+            <div class="back">
+                <a href="../index.html">BACK</a>
+            </div>
+        </div>
+
+        <div class="portfolio-wrapper">
+            <h1>insightUBC</h1>
+            <div class="column-portfolio-wrapper">
+                <div class="portfolio-image-wrapper">
+                    <img src="../imgs/campus-explorer.PNG">
+                </div>
+
+                <div class="portfolio-content-wrapper">
+
+                    <p><b>Category: </b>Academic project</p>
+
+                    <p><b>About: </b>I created a system that stores data about UBC courses and buildings allows users to query this data.
+                    It supports a Domain Specific Language to query the data stored. It was made using TypeScript and JavaScript with Node.js, Yarn,
+                    Mocha, Chai, Git, and IntelliJ.  </p>
+
+                    <p>The first checkpoint consisted of creating a comprehensive black box testing suite that exhausted the specification
+                        for the second checkpoint. It introduced promise chaining in order to build complex unit tests.
+                    </p>
+
+                    <p>
+                        The second checkpoint involved building the backend to reply to the query about the courses dataset. The query
+                        was based on a given EBNF. Using asynchrony and Promise calls, I processed raw datasets by parsing, validating, 
+                        and modelling the data using a data structure of my choice. This involved using JSZip.
+                    </p>
+
+                    <p>
+                        The third checkpoint further developed the backend from the previous checkpoint to include datasets about buildings.
+                        I used parse5 to parse through HTML files into a more convenient JSON format. I also learned how to find geolocations
+                        of each building by sending a http GET request using the URL-encoded versions of the buildings' addresses.
+                    </p>
+
+                    <p>
+                        The final checkpoint was building the frontend and connecting it altogether. I learned about RESTful API, asynchronous
+                        JavaScript, and XML (AJAX) UI testing. I built the frontend UI that allowed for building and sending queries from the UI
+                        to the Web server. Information from the UI was extracted using the browser-native global document object. An Ajax/REST 
+                        request is sent where I learned to use browser-native XMLHttpRequest.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
