@@ -202,9 +202,9 @@
     portfolioItems.forEach(portfolioItem => {
         portfolioItem.addEventListener('click', () => {
             let currName = portfolioItem.childNodes[1].getAttribute("id");
-            let path = "/C:/Users/Clara/Documents/Visual%20Studio%202019/claras-portfolio/";
+            let path = "clarakim.me/components/";
             if (portfolioNames.includes(currName)) {
-                window.location.href = path + "components/" + currName + ".html";
+                window.location.href = path + currName + ".html";
             }
         })
     })
