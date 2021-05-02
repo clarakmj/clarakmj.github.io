@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clara's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="index.html">Home</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="about.html">About</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="brand">
+                    <div>MIN JUNG CLARA KIM</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="portfolio-items-wrapper">
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" id="query" style="background-image:url(imgs/1-ubc.jpg)"></div>
+
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="imgs/logos/search.png">
+                        </div>
+
+                        <div class="subtitle">
+                            insightUBC system using TypeScript, JavaScript
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" id ="ta" style="background-image:url(imgs/2-ta.jpg)"></div>
+
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="imgs/logos/pencil.png">
+                        </div>
+
+                        <div class="subtitle">
+                            CPSC 210 TA
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" id="cpp" style="background-image:url(imgs/3-rosegarden.jpg)"></div>
+
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="imgs/logos/image.png">
+                        </div>
+
+                        <div class="subtitle">
+                            Image manipulation using C++
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" id="bunny" style="background-image:url(imgs/4-bunny.jpg)"></div>
+
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="imgs/logos/carrot.png">
+                        </div>
+
+                        <div class="subtitle">
+                            Bunny Feeder using Java
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" id="medhub" style="background-image:url(imgs/5-documenting.jpg)"></div>
+
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="imgs/logos/medicine.png">
+                        </div>
+
+                        <div class="subtitle">
+                            MedHub using React, JavaScript, HTML, CSS
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" id="read" style="background-image:url(imgs/6-reading.jpg)"></div>
+
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="imgs/logos/glasses.png">
+                        </div>
+
+                        <div class="subtitle">
+                            How Long to Read using React, JavaScript, HTML, CSS
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" id="teach" style="background-image:url(imgs/7-teaching.jpg)"></div>
+
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="imgs/logos/apple.png">
+                        </div>
+
+                        <div class="subtitle">
+                            UBC Nursing Clinical Instructor
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" id="nurse" style="background-image:url(imgs/8-perinatal.jpg)"></div>
+
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="imgs/logos/baby.png">
+                        </div>
+
+                        <div class="subtitle">
+                            Perinatal Registered Nurse
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" id="research" style="background-image:url(imgs/9-research.jpg)"></div>
+
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="imgs/logos/research.png">
+                        </div>
+
+                        <div class="subtitle">
+                            University of Calgary Research Assistant
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+    
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover', () => {
+            portfolioItem.childNodes[1].classList.add('img-darken');
+        })
+
+        portfolioItem.addEventListener('mouseout', () => {
+            portfolioItem.childNodes[1].classList.remove('img-darken');
+        })
+    })
+    
+    const portfolioNames = [
+        "query",
+        "ta",
+        "cpp",
+        "bunny",
+        "medhub",
+        "read",
+        "teach",
+        "nurse",
+        "research"
+    ]
+
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('click', () => {
+            let currName = portfolioItem.childNodes[1].getAttribute("id");
+            let path = "/C:/Users/Clara/Documents/Visual%20Studio%202019/claras-portfolio/";
+            if (portfolioNames.includes(currName)) {
+                window.location.href = path + "components/" + currName + ".html";
+            }
+        })
+    })
+
+</script>
+</html>
